@@ -1,4 +1,4 @@
-
+#JOMAR NACORDA
 
 j = int(input("Enter the first side:"))
 k = int(input("Enter the second side:"))
