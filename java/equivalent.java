@@ -2,8 +2,8 @@
 public class equivalent{
     public static void main(String args[])
     {
-        int a[] = { 1,1,2,3,4,6,8,9};
-        int b[] = { 2,3,3,4,5,6,7 };
+        int b[] = { 1,1,2,3,3,4,6,8,9,1};
+        int a[] = { 2,3,3,4,5,6,7,8,9 };
         equivalent eq =new equivalent();
 
         eq.union(a, b);
@@ -13,7 +13,7 @@ public class equivalent{
         eq.symDiff(a, b);
     }
 
-
+// Jomar A. Nacorda
     public void union(int a[], int b[]){
         String hold = "";
 
@@ -128,7 +128,8 @@ public class equivalent{
                     }
                 }
             }
-
+            
+            System.out.println(hold);
             String s = "";
 
             for (int i = 0; i < hold.length(); i++)

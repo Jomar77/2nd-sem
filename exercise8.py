@@ -8,7 +8,7 @@ print(0 in data)
 print(data + [2,10,5])
 print(tuple(data))
 
-data[0] = -5
+data[0] = -data[0]
 data.append(10)
 data.insert(2,22)
 data.pop(1)
