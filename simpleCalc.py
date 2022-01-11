@@ -1,34 +1,31 @@
 def readExpress():
     astring = input("Calculation: ").replace(" ", "")
-    a_list = []
+    lst = []
     for item in astring:
         if item not in ["0", "1", "2", "3" , "4", "5", "6", "7", "8", "9", "+", "-", "*", "^","/", "(", ")"]:
             print ("Unsupported Character: " + item)
             exit()
-        a_list.append(item)
+        lst.append(item)
+        
     count = 0
-
-    while count < len(a_list) - 1:
-        if a_list[count].isdigit() and a_list[count + 1] == "(":
-            a_list.insert(count+1 ,"*")            
-        if a_list[count].isdigit() and a_list[count +1].isdigit():
-            a_list[count] += a_list[count + 1]
-            del a_list[count + 1]
+    while count < len(lst) - 1:
+        if lst[count].isdigit() and lst[count + 1] == "(":
+            lst.insert(count+1 ,"*")            
+        if lst[count].isdigit() and lst[count +1].isdigit():
+            lst[count] += lst[count + 1]
+            del lst[count + 1]
         else:
             count += 1
-    return a_list
+    return lst
 
-
-def perform_operation(n1, operand, n2):
-    if operand == "+":
+def perform_operation(n1, sym, n2):
+    if sym == "+":
         return str(float(n1) + float(n2))
-    elif operand == "-":
+    elif sym == "-":
         return str(float(n1) - float(n2))
-    elif operand == "^":
-        return str(float(n1) ** float(n2))
-    elif operand == "*":
+    elif sym == "*":
         return str(float(n1) * float(n2))
-    elif operand == "/":
+    elif sym == "/":
         try:
             n = str(float(n1) / float(n2))
             return n

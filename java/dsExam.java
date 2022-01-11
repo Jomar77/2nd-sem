@@ -64,7 +64,6 @@ public class dsExam
                 static void flames(int total){
                         
                         int val = total;
-                        System.out.println(val);
                         if (val > 6)
                                 val = total%6;
                         

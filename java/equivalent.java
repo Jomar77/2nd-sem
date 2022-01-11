@@ -2,8 +2,8 @@
 public class equivalent{
     public static void main(String args[])
     {
-        int b[] = { 1,1,2,3,3,4,6,8,9,1};
-        int a[] = { 2,3,3,4,5,6,7,8,9 };
+        int a[] = { 1,1,2,3,3,4,6,8,9,1};
+        int b[] = { 2,3,3,4,5,6,7,8,9 };
         equivalent eq =new equivalent();
 
         eq.union(a, b);
@@ -102,7 +102,7 @@ public class equivalent{
                 }
             }
             System.out.println(s);
-        }
+        }   
 
 
 
@@ -129,7 +129,6 @@ public class equivalent{
                 }
             }
             
-            System.out.println(hold);
             String s = "";
 
             for (int i = 0; i < hold.length(); i++)
