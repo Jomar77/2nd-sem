@@ -3,10 +3,10 @@ public class recursive{
         recursive r = new recursive();
         System.out.println(r.ree(10));
         }
-    public int ree(int k) {
-        if (k == 0 ) {
+    public int ree(int n) {
+        if (n != 0)  // termination condition
+            return n * ree(n-1); // recursive call
+        else
             return 1;
-        } 
-        return k * ree(k - 1);
-        }
     }
+}
