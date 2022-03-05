@@ -4,12 +4,12 @@ public class DSExam3 {
   static Scanner s = new Scanner(System.in);
     public static void main(String[] args) {
         int r1 ,c1, r2, c2;
-
-        System.out.println("Enter rows then coulumn for Matrix A");
+        try{
+        System.out.println("Enter rows then column for Matrix A");
         r1= s.nextInt();
         c1= s.nextInt();
 
-        System.out.println("Enter rows then coulumn for Matrix B");
+        System.out.println("Enter rows then column for Matrix B");
         r2= s.nextInt();
         c2= s.nextInt();
         if(r2 != c1 ){
@@ -17,6 +17,8 @@ public class DSExam3 {
         }
         else{
         multiplyMatrices( r1, c1, r2,  c2);
+        }}catch(Exception e){
+            System.out.println("Input might be negative");
         }
 }
     static void multiplyMatrices(int r1, int c1, int r2, int c2) {
@@ -43,6 +45,7 @@ public class DSExam3 {
                 }
             }
         }
-        System.out.println(Arrays.deepToString(prod));
+        System.out.println("\nThe product is:");
+        System.out.println(Arrays.deepToString(prod).replace("], ", "]\n").replace("[[", "[").replace("]]", "]"));
     }
 }
