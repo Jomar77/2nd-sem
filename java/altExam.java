@@ -54,6 +54,18 @@ public class altExam {
         return count;
     }
 
+    int sum(char a[], char b[]){
+        int count = 0;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < b.length; j++) {
+                if (Character.toUpperCase(a[i]) == Character.toUpperCase(b[j])){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
     static void flames(int total){
 
             int val = total;
